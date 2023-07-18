@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace If3chi\Lumirex\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LumirexCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'lumirex';
 
     public $description = 'My command';
 
