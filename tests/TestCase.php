@@ -2,9 +2,9 @@
 
 namespace If3chi\Lumirex\Tests;
 
+use If3chi\Lumirex\LumirexServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use If3chi\Lumirex\LumirexServiceProvider;
 
 class TestCase extends Orchestra
 {

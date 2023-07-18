@@ -2,9 +2,9 @@
 
 namespace If3chi\Lumirex;
 
+use If3chi\Lumirex\Commands\LumirexCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use If3chi\Lumirex\Commands\LumirexCommand;
 
 class LumirexServiceProvider extends PackageServiceProvider
 {
