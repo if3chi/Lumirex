@@ -9,7 +9,7 @@ use Illuminate\Http\Client\Response;
 
 trait ForwardsRequests
 {
-    public function __callStatic($name, ...$params): Response
+    public static function __callStatic($name, $params): Response
     {
         return Lumirex::request(new static)
             ->$name(...$params)->send();

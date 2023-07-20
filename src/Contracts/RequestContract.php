@@ -15,7 +15,7 @@ interface RequestContract
     public function uri(): Uri;
     public function requiesAuth(): bool;
     public function authStrategy(): ?string;
-    public function authCredentials(): null|string|array;
+    public function authCredentials(): ?array;
     public function retry(): int;
     public function retryTiming(): float;
     public function timeout(): float;
