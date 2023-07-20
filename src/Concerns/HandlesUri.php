@@ -12,15 +12,15 @@ trait HandlesUri
     {
         $uri = Uri::fromString($this->baseUri);
 
-        if (!empty($paths = $this->path())) {
+        if (! empty($paths = $this->path())) {
             $uri->addPath($paths);
         }
 
-        if (!empty($fragments = $this->fragment())) {
+        if (! empty($fragments = $this->fragment())) {
             $uri->addFragment($fragments);
         }
 
-        if (!empty($parameters = $this->parameters())) {
+        if (! empty($parameters = $this->parameters())) {
             foreach ($parameters as $key => $value) {
                 $uri->addQueryParam($key, $value, true);
             }
@@ -29,7 +29,7 @@ trait HandlesUri
         return $uri;
     }
 
-    public function path(?string $path = null): ?string
+    public function path(string $path = null): ?string
     {
         return $path ?? $this->path;
     }

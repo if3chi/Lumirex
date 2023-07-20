@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Http;
 
 trait HasFake
 {
-    public static function fake(null|array|callable $callback = null): void
+    public static function fake(array|callable $callback = null): void
     {
         Http::fake($callback);
     }
