@@ -40,17 +40,17 @@ class Lumirex
         return $response;
     }
 
-    public function with(array $payload = [], array $headers = [], ?string $path = null): self
+    public function with(array $payload = [], array $headers = [], string $path = null): self
     {
-        if (! empty($payload)) {
+        if (!empty($payload)) {
             $this->request->payload($payload);
         }
 
-        if (! empty($headers)) {
+        if (!empty($headers)) {
             $this->request->headers($headers);
         }
 
-        if (! is_null($path)) {
+        if (!is_null($path)) {
             $this->request->path($path);
         }
 

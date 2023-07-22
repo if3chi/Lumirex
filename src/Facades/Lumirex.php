@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace If3chi\Lumirex\Facades;
 
-use Illuminate\Support\Facades\Facade;
 use If3chi\Lumirex\Lumirex as BaseLumirex;
+use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \If3chi\Lumirex\Lumirex
