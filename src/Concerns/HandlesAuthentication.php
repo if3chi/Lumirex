@@ -16,7 +16,7 @@ trait HandlesAuthentication
         return null;
     }
 
-    public function authCredentials(): null|array
+    public function authCredentials(): ?array
     {
         return null;
     }
