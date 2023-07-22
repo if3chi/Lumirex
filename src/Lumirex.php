@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace If3chi\Lumirex;
 
 use If3chi\Lumirex\Concerns\HasFake;
+use If3chi\Lumirex\Contracts\RequestContract;
+use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Http\Client\PendingRequest;
-use If3chi\Lumirex\Contracts\RequestContract;
 
 class Lumirex
 {
@@ -42,15 +42,15 @@ class Lumirex
 
     public function with(array $payload = [], array $headers = [], string $path = null): self
     {
-        if (!empty($payload)) {
+        if (! empty($payload)) {
             $this->request->payload($payload);
         }
 
-        if (!empty($headers)) {
+        if (! empty($headers)) {
             $this->request->headers($headers);
         }
 
-        if (!is_null($path)) {
+        if (! is_null($path)) {
             $this->request->path($path);
         }
 
