@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace If3chi\Lumirex;
 
 use If3chi\Lumirex\Concerns\HasFake;
-use If3chi\Lumirex\Contracts\RequestContract;
-use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Client\PendingRequest;
+use If3chi\Lumirex\Contracts\RequestContract;
 
 class Lumirex
 {
