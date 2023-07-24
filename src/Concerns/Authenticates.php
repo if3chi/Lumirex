@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace If3chi\Lumirex\Concerns;
 
-use Illuminate\Http\Client\PendingRequest;
 use If3chi\Lumirex\Contracts\RequestContract;
+use Illuminate\Http\Client\PendingRequest;
 
 trait Authenticates
 {
