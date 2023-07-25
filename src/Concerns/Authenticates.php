@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace If3chi\Lumirex\Concerns;
 
-use If3chi\Lumirex\Contracts\RequestContract;
 use Illuminate\Http\Client\PendingRequest;
+use If3chi\Lumirex\Contracts\RequestContract;
+use If3chi\Lumirex\Exceptions\AuthenticationException;
 
 trait Authenticates
 {
@@ -22,10 +23,11 @@ trait Authenticates
                 username: $tokenOrUsername,
                 password: $typeOrPasswd
             ),
-            default => $client->withToken(
+            'token' => $client->withToken(
                 token: $tokenOrUsername,
                 type: $typeOrPasswd ?? 'Bearer'
-            )
+            ),
+            default => throw AuthenticationException::inauthentic()
         };
     }
 }
